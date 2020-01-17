@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+  <table>
+    <tr>
+      <td>順位</td>
+      <td>ユーザー名</td>
+      <td>スコア</td>
+    </tr>
+    {% for user in users%}
+      <tr>
+        <!-- <td>{{ user.rank }}</td> -->
+        <td>{{ loop.index}}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.score }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

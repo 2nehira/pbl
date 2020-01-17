@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block head %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+  <script src= "{{url_for('static', filename='js/main.js')}}"></script>
+{% endblock %}
+{% block body %}
+  <div id="panel"></div>
+  <div id="score"></div>
+  <div id="result">経過秒数: </div>
+  <input type="button" value="restart" onclick="restart();"/>
+{% endblock %}
